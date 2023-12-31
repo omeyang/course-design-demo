@@ -1,3 +1,4 @@
+from stock_analysis import StockAnalysis
 from stock_data_fetcher import StockDataFetcher
 
 """
@@ -24,5 +25,7 @@ def first_problem(token, ts_codes=['000063.SZ', '600000.SH'], start_date='201101
 
 
 if __name__ == '__main__':
-    tushare_token = '6ce83125505f27b1cdf3a2d6d99fda0608a36c1d787ddb3d7fb9b90b'
-    first_problem(tushare_token)
+    # tushare_token = '6ce83125505f27b1cdf3a2d6d99fda0608a36c1d787ddb3d7fb9b90b'
+    # first_problem(tushare_token)
+    analysis = StockAnalysis()
+    analysis.analyze_stock_relationship('./data/000002.SH.csv', './data/000063.SZ.csv')
